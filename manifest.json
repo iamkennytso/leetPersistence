@@ -1,0 +1,19 @@
+{
+  "name": "leetPersistence",
+  "description": "leetcode tracker",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": ["https://www.googleapis.com/", "identity"],
+  "action": {
+    "default_popup": "setupPopup.html",
+    "default_icon": "/imgs/logo_128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "oauth2": {
+    "client_id": "413745543904-77deq74j9t373qpdbq8l01pki9v3i5m8.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/spreadsheets"]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi111Z1NXTicl95TTT37PVQIRmMebXo1UEFvyiDe/4olxTwTMH1bAAXwhyHn/AivhEOF9mf78jpHhmqhBB9wL+4f8gPAUOVFlGk+vqOM4n3cfyblWxdelF0mLaQ6hwjODxpZGiAzNZyGtmQEUlo7ALAwPwJueiLNriZqtMa1rZZ7DfUxxuzg/nqBj8Xd9knkc6jyt2m01AZbq1cnYgwdKO+dYI0b0xM+9eDhDaro02JOsP5xgEq0DM4yYqriTBG5w8uNeLTZGBl9dP1KL696n5MeykI5u9M9wzVaZKNp94i46lnLhw811kzDghIEwMu3MmMSFrzKFMbCAqhsm6N1ZHwIDAQAB"
+}
