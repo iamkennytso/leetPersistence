@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: lightgrey;
+        table-layout: auto;
+      }
+      table {
+        width: 100%;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 50px;
+      }
+
+      tr {
+        position: relative
+      }
+
+      td:first-child, th:first-child {
+        width: 70%; 
+      }
+
+      td:not(:first-child, :last-child), th:not(:first-child, :last-child) {
+        width: 1%;
+        white-space: nowrap;
+      }
+
+      td:last-child, th:last-child {
+        width: 30%;
+        white-space: nowrap;
+      }
+
+      
+      td:first-child:hover::after {
+        content: attr(data-fulltext);
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>Rank</th>
+          <th>Last Try</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+    <script src="main.js"></script>
+  </body>
+</html>
