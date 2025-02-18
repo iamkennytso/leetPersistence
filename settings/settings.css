@@ -12,6 +12,8 @@ header {
 
 .quoteContainer {
   border: 4px solid darkgrey;
+  border-radius: 5px;
   background-color: grey;
   padding: 10px;
+  font-size: 12px;
 }
