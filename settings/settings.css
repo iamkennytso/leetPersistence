@@ -1,8 +1,3 @@
-body {
-  background-color: black;
-  color: white
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -11,9 +6,8 @@ header {
 }
 
 .quoteContainer {
-  border: 4px solid darkgrey;
+  border: 4px solid #FE9B33;
   border-radius: 5px;
-  background-color: grey;
   padding: 10px;
   font-size: 12px;
 }

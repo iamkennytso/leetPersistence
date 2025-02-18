@@ -5,10 +5,14 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  background-color: #292C33;
+  color: white;
 }
 
 #content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .tab-container {
@@ -28,7 +32,14 @@ body {
 }
 
 .tab.active {
-  color: black;
+  color: #E86726;
   font-weight: bold;
-  background-color: darkgray;
+  background-color: #313E35;
 }
+
+/* Color Scheme:
+#FE9B33
+#E86726
+#B14B34
+#313E35
+#292C33 */

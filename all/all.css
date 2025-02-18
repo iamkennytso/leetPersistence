@@ -3,7 +3,7 @@ table {
 }
 
 th, td {
-  border: 1px solid black;
+  border: 1px solid #292C33;
   padding: 8px;
   text-align: left;
   white-space: nowrap;
@@ -36,7 +36,7 @@ td:first-child:hover::after {
   position: absolute;
   left: 0;
   bottom: 30px;
-  background-color: #333;
+  background-color: #313E35;
   color: white;
   padding: 5px;
   border-radius: 5px;
