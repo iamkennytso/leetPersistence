@@ -1,7 +1,20 @@
 (async () => {
   const contentDiv = document.getElementById('mainContentContainer')
   const allLeets = await chrome.storage.local.get('allLeets');
-  
+
+  const listButton = document.getElementById("listButton")
+  listButton.addEventListener("click", () => {
+    const textPopupText = document.getElementById("textPopupText")
+    textPopupText.innerHTML = "Need some leetcodes to add? Try some of these lists:" 
+      + "<br/><br/>" + "<a href='https://leetcode.com/problem-list/oizxjoit/' target='_blank'>Blind 75</a>"
+      + "<br/><br/>" + "<a href='https://www.techinterviewhandbook.org/grind75/' target='_blank'>Grind 75</a>"
+      + "<br/><br/>" + "<a href='https://leetcode.com/studyplan/leetcode-75/' target='_blank'>LeetCode 75</a>"
+      + "<br/><br/>" + "<a href='https://leetcode.com/problem-list/plakya4j/' target='_blank'>NeetCode 150</a>"
+      + "<br/><br/>" + "If these aren't to your liking, try filtering LeetCode by companies!"
+    const textPopup = document.getElementById("textPopup");
+    textPopup.classList.remove('hidden')
+  })
+
   if (!Object.keys(allLeets).length) {
     // first time run
     const introContent = document.createElement('p')
@@ -14,4 +27,6 @@
     contentDiv.appendChild(introContent)
     return
   }
+  
+
 })()

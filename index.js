@@ -27,8 +27,6 @@ const loadTab = (tab, tabElement) => {
     tab.classList.remove('active');
   });
 
-
-
   fetch(`${tab}/${tab}.html`)
     .then(response => response.text())
     .then(data => {
@@ -60,4 +58,9 @@ const loadTab = (tab, tabElement) => {
   tabElement.classList.add('active');
 }
 
-console.log('index loaded')
+window.onclick = function (event) {
+  const textPopup = document.getElementById("textPopup");
+  if (event.target === textPopup) {
+    document.getElementById("textPopup").classList.add("hidden");
+  }
+};
