@@ -1,6 +1,43 @@
 (async () => {
-  const contentDiv = document.getElementById('mainContentContainer')
+  const contentDiv = document.getElementById('mainContentContainer');
   const allLeets = await chrome.storage.local.get('allLeets');
+
+  const getLeetcodeString = (string, element) => {
+    const arr = string.split('/')
+    if (arr.length < 4 || arr[2] !== 'leetcode.com' || arr[3] !== 'problems') {
+      element.style.color = '#E86726'
+      return 'Invalid Leetcode URL'
+    }
+    const problemSegment = arr[4]
+    element.style.color = 'white'
+    return problemSegment.split('-').map((word, idx) => {
+        const [first, ...rest] = word.split('')
+        return `${idx === 0 ? first : first.toUpperCase()}${rest.join('')}`
+    }).join('')
+  }
+
+  const addButton = document.getElementById("addButton");
+  addButton.addEventListener("click", () => {
+    const addPopup = document.getElementById("addPopup");
+    addPopup.classList.remove('hidden')
+    const leetLinkInput = document.getElementById("leetLink");
+    leetLinkInput.addEventListener("input", (e) => {
+      e.stopImmediatePropagation();
+      const leetcode = document.getElementById("leetcode");
+
+      const leetcodeString = getLeetcodeString(e.target.value, leetcode)
+      leetcode.innerHTML = leetcodeString
+    })
+    const rankButtons = Array.from(document.getElementsByClassName("rankOption"))
+    rankButtons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        const selectedRank = document.getElementsByClassName("selectedRank")[0]
+        selectedRank.classList.remove("selectedRank")
+        button.classList.add("selectedRank")
+      })
+    })
+  })
 
   const listButton = document.getElementById("listButton")
   listButton.addEventListener("click", () => {

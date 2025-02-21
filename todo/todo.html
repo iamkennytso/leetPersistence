@@ -4,10 +4,40 @@
     <link rel="stylesheet" href="todo/todo.css">
   </head>
   <body>
+    <div id="addPopup" class="hidden">
+      <div class="addPopupContent">
+        <div>
+          <label>LeetCode link:</label>
+          <input id="leetLink" name="leetLink"/>
+        </div>
+        <div class="leetcodeContainer">
+          <span>Leetcode:</span>
+          <span id="leetcode"></span>
+        </div>
+        <div class="rankSelectContainer">
+          <label for="rankSelect">How'd you do:</label>
+          <div class="rankOptionContainer" name="rankSelect">
+            <div class="rankOption selectedRank">S</div>
+            <div class="rankOption">A</div>
+            <div class="rankOption">B</div>
+            <div class="rankOption">C</div>
+            <div class="rankOption">D</div>
+            <div class="rankOption">F</div>
+          </div>
+        </div>
+        <div class="lastSolvedContainer">
+          <label for="lastSolved">Date last solved:</label>
+          <input type="date" name="lastSolved" />
+        </div>
+        <div class="addLeetcodeButtonContainer">
+          <button class="primaryButton" id="addLeetcodeButton">Add</button>
+        </div>
+      </div>
+    </div>
     <div id="mainContentContainer"></div>
     <div class="bottomButtonsContainer">
-      <button class="bottomButton">Add</button>
-      <button class="bottomButton" id="listButton">List</button>
+      <button class="bottomButton primaryButton" id="addButton">Add</button>
+      <button class="bottomButton primaryButton" id="listButton">List</button>
     </div>
     <!-- js file injected from index.js -->
   </body>

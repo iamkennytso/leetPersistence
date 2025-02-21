@@ -66,6 +66,18 @@ body {
   background-color: #292C33;
 }
 
+.primaryButton {
+  text-align: center;
+  font-size: 16px;
+  color: #FE9B33;
+  border: 2px solid #E86726;
+  border-radius: 6px;
+  background-color: #313E35;
+}
+
+.primaryButton:hover {
+  background-color: #292C33;
+}
 /* Color Scheme:
 #FE9B33
 #E86726

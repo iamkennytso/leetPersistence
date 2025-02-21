@@ -6,8 +6,6 @@
 //   console.log("Value is " + result.key);
 // });
 
-console.log('all hello');
-
 (function() {
   const DEMO_LEETS = [
     {

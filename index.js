@@ -59,8 +59,13 @@ const loadTab = (tab, tabElement) => {
 }
 
 window.onclick = function (event) {
+  const { target } = event
   const textPopup = document.getElementById("textPopup");
-  if (event.target === textPopup) {
-    document.getElementById("textPopup").classList.add("hidden");
+  const addPopup = document.getElementById("addPopup")
+  if (target === textPopup) {
+    textPopup.classList.add("hidden");
+  }
+  if (target === addPopup) {
+    addPopup.classList.add("hidden");
   }
 };
