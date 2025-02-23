@@ -104,6 +104,10 @@ header {
   justify-content: space-between;
 }
 
+.highlight {
+  color: #FE9B33
+}
+
 /* Color Scheme:
 #FE9B33
 #E86726

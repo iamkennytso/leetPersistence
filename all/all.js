@@ -7,32 +7,32 @@
 // });
 
 (function() {
-  const DEMO_LEETS = [
-    {
-      url: "https://leetcode.com/problems/contains-duplicate",
-      rank: "S",
-      lastTry: "2024-08-31",
-      tags: ["Bl, BnB"]
-    },
-    {
-      url: "https://leetcode.com/problems/missing-number/",
-      rank: "S",
-      lastTry: "2023-08-31",
-      tags: []
-    },
-  ]
+  // const DEMO_LEETS = [
+  //   {
+  //     url: "https://leetcode.com/problems/contains-duplicate",
+  //     rank: "S",
+  //     lastTry: "2024-08-31",
+  //     tags: ["Bl, BnB"]
+  //   },
+  //   {
+  //     url: "https://leetcode.com/problems/missing-number/",
+  //     rank: "S",
+  //     lastTry: "2023-08-31",
+  //     tags: []
+  //   },
+  // ]
   
-  const tableBody = document.getElementById('tableBody')
+  // const tableBody = document.getElementById('tableBody')
   
-  DEMO_LEETS.forEach(leet => {
-    const row = tableBody.insertRow()
-    const urlCell = row.insertCell()
-    const rankCell = row.insertCell()
-    const lastTryCell = row.insertCell()
-    const tagsCell = row.insertCell()
-    urlCell.innerHTML = leet.url
-    rankCell.innerHTML = leet.rank
-    lastTryCell.innerHTML = leet.lastTry
-    tagsCell.innerHTML = leet.tags.join(' ')
-  })
+  // DEMO_LEETS.forEach(leet => {
+  //   const row = tableBody.insertRow()
+  //   const urlCell = row.insertCell()
+  //   const rankCell = row.insertCell()
+  //   const lastTryCell = row.insertCell()
+  //   const tagsCell = row.insertCell()
+  //   urlCell.innerHTML = leet.url
+  //   rankCell.innerHTML = leet.rank
+  //   lastTryCell.innerHTML = leet.lastTry
+  //   tagsCell.innerHTML = leet.tags.join(' ')
+  // })
 })()
