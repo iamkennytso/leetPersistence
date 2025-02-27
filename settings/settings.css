@@ -20,9 +20,19 @@ header {
   font-family: monospace;
   align-items: center;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .retryDaysInput {
   width: 30px;
   margin-left: 100px;
+}
+
+.settingsPrimaryButtonContainer {
+  width: calc(100% - 60px);
+  margin: 10px 30px;
+}
+
+#saveButton {
+  width: 100%
 }
